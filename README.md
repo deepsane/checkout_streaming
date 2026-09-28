@@ -48,8 +48,8 @@ within ~60 seconds of the producer starting.
 ## Known limitations
 - No graceful shutdown flush (in-flight aggregation window is lost on kill)
 - No exactly-once semantics
-- No schema validation/registry (e.g. Avro + Schema Registry) — plain JSON
-- Single broker, no replication — not fault-tolerant
+- Plain JSON: No schema validation/registry (e.g. Avro + Schema Registry)
+- Single broker, no replication: not fault-tolerant
 
 ## Project structure
 ```
@@ -61,7 +61,7 @@ within ~60 seconds of the producer starting.
 │   ├── Producer.java
 │   ├── RawSink.java
 │   └── Aggregator.java
-└── data/
+└── data (GENERATED WHEN RUN)/
     ├── raw/
     └── aggregates/
 ```
